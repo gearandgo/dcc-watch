@@ -31,6 +31,7 @@
   .brand{border:1.5px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:5px 11px;font:600 14px Barlow,sans-serif;cursor:pointer}
   .brand[aria-pressed="true"]{border-color:var(--ink);color:var(--ink)}
   .brand b{font-weight:700;color:var(--new);margin-left:4px}
+  .brand.ctl{border-style:dashed;color:var(--muted)}
   .brand:focus-visible,.tab:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
   .tabs{display:flex;border-bottom:2px solid var(--line);margin-bottom:12px}
@@ -116,10 +117,15 @@ function renderBrands(){
   const names = Object.keys(DATA.manufacturers).sort((a,b)=>a.localeCompare(b));
   const unseenBy = {};
   for (const h of HIST) if (h.time > lastVisit) unseenBy[h.manufacturer] = (unseenBy[h.manufacturer]||0) + h.added.length;
-  $("#brands").innerHTML = names.map(n =>
+  const allOn = !selected, noneOn = selected && selected.length === 0;
+  $("#brands").innerHTML =
+    `<button class="brand ctl" data-ctl="all" ${allOn ? "disabled" : ""}>Vše</button>
+     <button class="brand ctl" data-ctl="none" ${noneOn ? "disabled" : ""}>Nic</button>` +
+    names.map(n =>
     `<button class="brand" aria-pressed="${isOn(n)}" data-b="${esc(n)}">${esc(n)}${unseenBy[n] ? `<b>+${unseenBy[n]}</b>` : ""}</button>`).join("");
   $("#brands").onclick = e => {
     const b = e.target.closest(".brand"); if (!b) return;
+    if (b.dataset.ctl) { selected = b.dataset.ctl === "all" ? null : []; LS.set("brands", selected); render(); return; }
     const n = b.dataset.b;
     if (!selected) selected = names.slice();
     selected = selected.includes(n) ? selected.filter(x => x !== n) : [...selected, n];
