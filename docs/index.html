@@ -25,6 +25,10 @@
   header{background:var(--ink);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 12px;position:sticky;top:0;z-index:5}
   header h1{margin:0;font:700 22px/1 "Barlow Semi Condensed",Barlow,sans-serif;letter-spacing:.01em}
   header small{display:block;margin-top:4px;color:#B8C0D4;font-size:13px}
+  .hrow{display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:720px;margin:0 auto}
+  .run{flex:0 0 auto;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 12px;font:700 14px "Barlow Semi Condensed",sans-serif;cursor:pointer}
+  .run:disabled{opacity:.6;cursor:default}
+  .runmsg{max-width:720px;margin:8px auto 0;font-size:13px;color:#DCE2EE}
   main{max-width:720px;margin:0 auto;padding:12px 12px 60px}
 
   .brands{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px}
@@ -68,8 +72,11 @@
 </head>
 <body>
 <header>
-  <h1>Diecastcompany.nl – hlídač</h1>
-  <small id="updated">Načítám…</small>
+  <div class="hrow">
+    <div><h1>Diecastcompany.nl – hlídač</h1><small id="updated">Načítám…</small></div>
+    <button class="run" id="runNow">Zkontrolovat teď</button>
+  </div>
+  <div class="runmsg" id="runMsg" hidden></div>
 </header>
 <main>
   <div class="brands" id="brands"></div>
@@ -171,6 +178,53 @@ document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
   $("#news").hidden = tab !== "news"; $("#catalog").hidden = tab !== "catalog"; render();
 });
 $("#q").oninput = renderCatalog; $("#st").onchange = renderCatalog;
+// --- ruční spuštění hlídače přes GitHub Actions ---
+const REPO = "gearandgo/dcc-watch", WORKFLOW = "watch.yml";
+const runMsg = t => { const m = $("#runMsg"); m.hidden = !t; m.textContent = t || ""; };
+function getToken(force){
+  let t = force ? null : LS.get("gh_token", null);
+  if (!t) {
+    t = prompt("Vlož GitHub token (vytvoříš ho jednou, uloží se jen v tomhle telefonu):");
+    if (!t) return null;
+    t = t.trim(); LS.set("gh_token", t);
+  }
+  return t;
+}
+async function ghFetch(path, opts = {}, token){
+  return fetch("https://api.github.com/repos/" + REPO + path, {...opts,
+    headers: {"Accept": "application/vnd.github+json", "Authorization": "Bearer " + token, ...(opts.headers||{})}});
+}
+async function waitForRun(token, startedAt){
+  const btn = $("#runNow"); const t0 = Date.now();
+  while (Date.now() - t0 < 12 * 60 * 1000) {
+    await new Promise(r => setTimeout(r, 20000));
+    try {
+      const r = await ghFetch("/actions/workflows/" + WORKFLOW + "/runs?per_page=1", {}, token);
+      const j = await r.json(); const run = j.workflow_runs && j.workflow_runs[0];
+      if (!run || new Date(run.created_at) < startedAt) { runMsg("Čekám, až se spustí…"); continue; }
+      if (run.status !== "completed") { runMsg(`Běží (${Math.round((Date.now()-t0)/1000)} s)… obvykle to trvá 3–4 minuty.`); continue; }
+      if (run.conclusion === "success") { runMsg("Hotovo – načítám nová data."); await new Promise(r => setTimeout(r, 15000)); await load(); runMsg(""); }
+      else runMsg("Běh skončil chybou – mrkni na GitHub → Actions.");
+      btn.disabled = false; return;
+    } catch (e) { runMsg("Nedaří se zjistit stav: " + e.message); }
+  }
+  btn.disabled = false; runMsg("Trvá to moc dlouho, zkontroluj GitHub → Actions.");
+}
+$("#runNow").onclick = async (e) => {
+  let token = getToken(e.shiftKey); if (!token) return;
+  const btn = $("#runNow"); btn.disabled = true; runMsg("Spouštím…");
+  const startedAt = new Date(Date.now() - 5000);
+  try {
+    const r = await ghFetch("/actions/workflows/" + WORKFLOW + "/dispatches",
+      {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({ref: "main"})}, token);
+    if (r.status === 204) { runMsg("Spuštěno. Výsledek přijde i do Telegramu."); waitForRun(token, startedAt); return; }
+    if (r.status === 401 || r.status === 403 || r.status === 404) {
+      LS.set("gh_token", null); runMsg("Token nefunguje nebo nemá právo Actions: Read and write – klikni znovu a vlož nový.");
+    } else runMsg("GitHub odpověděl " + r.status + ".");
+  } catch (err) { runMsg("Chyba: " + err.message); }
+  btn.disabled = false;
+};
+
 $("#markSeen").onclick = () => { lastVisit = DATA.generated || new Date().toISOString(); LS.set("lastVisit", lastVisit); render(); };
 
 async function load(){
