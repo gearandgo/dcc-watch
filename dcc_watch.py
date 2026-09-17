@@ -119,6 +119,29 @@ def list_manufacturers(session, delay):
 
 
 # ------------------------------------------------------------- scraping --
+IMG_ATTRS = ("data-src", "data-original", "data-lazy", "data-lazy-src", "data-srcset", "srcset", "src")
+PLACEHOLDER_RE = re.compile(r"(blank|spacer|lazy|loading|pixel|placeholder|1x1)", re.I)
+
+
+def image_from(img):
+    """Vrátí URL obrázku z <img>, včetně lazy-load variant; placeholdery přeskočí."""
+    if img is None:
+        return ""
+    candidates = []
+    for attr in IMG_ATTRS:
+        v = img.get(attr)
+        if v:
+            candidates.append(v.split(",")[0].split()[0])
+    style = img.get("style") or ""
+    m = re.search(r"url\(['\"]?([^'\")]+)", style)
+    if m:
+        candidates.append(m.group(1))
+    for c in candidates:
+        if not PLACEHOLDER_RE.search(c) and not c.startswith("data:"):
+            return urljoin(BASE, c)
+    return ""
+
+
 def parse_articles(soup, manufacturer):
     """Vytáhne položky daného výrobce ze stránky s výsledky.
 
@@ -134,9 +157,11 @@ def parse_articles(soup, manufacturer):
         title = a.get("title") or (img.get("alt") if img else None) or a.get_text(" ", strip=True)
         title = html.unescape(title or "").split("| The Diecast Company")[0].strip(" |")
         rec = items.setdefault(code, {"code": code, "title": "", "status": "current",
-                                      "available": "", "url": urljoin(BASE, a["href"])})
+                                      "available": "", "url": urljoin(BASE, a["href"]), "image": ""})
         if len(title) > len(rec["title"]):
             rec["title"] = title
+        if not rec["image"]:
+            rec["image"] = image_from(img)
 
         # stav zjistíme z bloku kolem odkazu (pre-order obrázek / "Available : ...")
         block = a
@@ -194,6 +219,9 @@ def scrape_manufacturer(session, name, url, delay):
                 got = parse_articles(BeautifulSoup(fetch(session, purl, delay), "html.parser"), name)
         items.update(got)
 
+    with_img = [r for r in items.values() if r.get("image")]
+    log(f"  {name}: {len(with_img)}/{len(items)} položek má obrázek"
+        + (f", např. {with_img[0]['image']}" if with_img else ""))
     if hits and len(items) < hits * 0.8:
         log(f"  ! varování: načteno {len(items)} položek, web hlásí {hits} – parser možná něco přehlíží")
     return items, hits
@@ -239,7 +267,7 @@ def write_site_data(state, results, now_s):
     DOCS_DIR.mkdir(exist_ok=True)
     data = {"generated": now_s, "manufacturers": {}}
     for name, items in state.items():
-        active = [{k: v for k, v in r.items() if k in ("code", "title", "status", "available", "url", "first_seen")}
+        active = [{k: v for k, v in r.items() if k in ("code", "title", "status", "available", "url", "first_seen", "image")}
                   for r in items.values() if r.get("active", True)]
         active.sort(key=lambda r: (r.get("first_seen", ""), r["code"]), reverse=True)
         data["manufacturers"][name] = {"count": len(active), "items": active}
