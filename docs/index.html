@@ -6,7 +6,7 @@
 <title>DCC hlídač</title>
 <meta name="theme-color" content="#16213A">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%2316213A'/><text x='32' y='42' font-size='30' text-anchor='middle' fill='%23E4581C' font-family='sans-serif' font-weight='700'>DC</text></svg>">
+<link rel="icon" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
@@ -23,7 +23,9 @@
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Barlow,system-ui,sans-serif;-webkit-text-size-adjust:100%}
   header{background:#16213A;color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 12px;position:sticky;top:0;z-index:5}
-  header h1{margin:0;color:#fff;font:700 22px/1 "Barlow Semi Condensed",Barlow,sans-serif;letter-spacing:.01em}
+  header h1{margin:0;color:#fff;font:700 22px/1 "Barlow Semi Condensed",Barlow,sans-serif;letter-spacing:.01em;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  header .logo{height:48px;width:auto;display:block}
+  header .sub{font:600 13px/1 Barlow,sans-serif;color:#B8C0D4;letter-spacing:.04em;text-transform:uppercase}
   header small{display:block;margin-top:4px;color:#B8C0D4;font-size:13px}
   .hrow{display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:720px;margin:0 auto}
   .runbtn{flex:0 0 auto;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 12px;font:700 14px "Barlow Semi Condensed",sans-serif;cursor:pointer}
@@ -82,7 +84,7 @@
 <body>
 <header>
   <div class="hrow">
-    <div><h1>Diecastcompany.nl – hlídač</h1><small id="updated">Načítám…</small></div>
+    <div><h1><img class="logo" src="logo.png" alt="Gear and Go"><span class="sub">hlídač diecastcompany.nl</span></h1><small id="updated">Načítám…</small></div>
     <button class="runbtn" id="runNow">Zkontrolovat teď</button>
   </div>
   <div class="runmsg" id="runMsg" hidden></div>
