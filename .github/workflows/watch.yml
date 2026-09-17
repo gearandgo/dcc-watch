@@ -1,0 +1,30 @@
+name: Hlídač diecastcompany.nl
+
+on:
+  schedule:
+    - cron: "0 5,11,17 * * *"   # 3x denně (UTC) – 7:00, 13:00, 19:00 našeho času v létě
+  workflow_dispatch:            # ruční spuštění tlačítkem na GitHubu
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python dcc_watch.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      - name: Uložit stav zpět do repa
+        run: |
+          git config user.name "dcc-watch"
+          git config user.email "bot@users.noreply.github.com"
+          git add state.json reports/ docs/
+          git diff --cached --quiet || git commit -m "stav $(date -u +'%Y-%m-%d %H:%M')"
+          git push
