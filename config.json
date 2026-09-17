@@ -14,9 +14,9 @@
   "delay_seconds": 1.5,
   "notify_on_baseline": true,
   "telegram": {
-    "enabled": false,
+    "enabled": true,
     "token": "",
-    "chat_ids": []
+    "chat_ids": [-5211409928]
   },
   "email": {
     "enabled": false,
