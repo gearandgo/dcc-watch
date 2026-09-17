@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DCC hlídač</title>
+<meta name="theme-color" content="#16213A">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%2316213A'/><text x='32' y='42' font-size='30' text-anchor='middle' fill='%23E4581C' font-family='sans-serif' font-weight='700'>DC</text></svg>">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#EDEFF2; --surface:#FFFFFF; --ink:#16213A; --muted:#66708A; --line:#D8DCE4;
+    --new:#1F7A4D; --new-bg:#E3F3EA; --gone:#9B2C2C; --gone-bg:#F8E5E5;
+    --pre:#9A6A12; --pre-bg:#FBF0D6; --accent:#E4581C;
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+    --bg:#121722; --surface:#1B2130; --ink:#EEF1F6; --muted:#98A2B8; --line:#2C3447;
+    --new:#5FD096; --new-bg:#173626; --gone:#F09A9A; --gone-bg:#3E1E1E; --pre:#E8B85C; --pre-bg:#3B2E12;
+  }}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Barlow,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+  header{background:var(--ink);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 12px;position:sticky;top:0;z-index:5}
+  header h1{margin:0;font:700 22px/1 "Barlow Semi Condensed",Barlow,sans-serif;letter-spacing:.01em}
+  header small{display:block;margin-top:4px;color:#B8C0D4;font-size:13px}
+  main{max-width:720px;margin:0 auto;padding:12px 12px 60px}
+
+  .brands{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px}
+  .brand{border:1.5px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:5px 11px;font:600 14px Barlow,sans-serif;cursor:pointer}
+  .brand[aria-pressed="true"]{border-color:var(--ink);color:var(--ink)}
+  .brand b{font-weight:700;color:var(--new);margin-left:4px}
+  .brand:focus-visible,.tab:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .tabs{display:flex;border-bottom:2px solid var(--line);margin-bottom:12px}
+  .tab{flex:1;background:none;border:0;padding:10px 4px;font:700 16px "Barlow Semi Condensed",sans-serif;color:var(--muted);cursor:pointer;margin-bottom:-2px;border-bottom:2px solid transparent}
+  .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+
+  .run{margin:0 0 18px}
+  .run h2{font:700 15px "Barlow Semi Condensed",sans-serif;color:var(--muted);margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline}
+  .run h2 span{font:600 13px Barlow,sans-serif}
+  .card{background:var(--surface);border-radius:10px;padding:10px 12px;margin-bottom:8px;border-left:4px solid var(--line)}
+  .card.new{border-left-color:var(--new)} .card.gone{border-left-color:var(--gone)} .card.chg{border-left-color:var(--pre)}
+  .card .who{font:700 14px "Barlow Semi Condensed",sans-serif;margin-bottom:4px}
+  .item{display:block;color:inherit;text-decoration:none;padding:6px 0;border-top:1px solid var(--line)}
+  .item:first-of-type{border-top:0}
+  .item .code{font:700 15px "Barlow Semi Condensed",sans-serif;letter-spacing:.02em}
+  .item .name{display:block;color:var(--muted);font-size:14px}
+  .tag{display:inline-block;font:600 12px Barlow,sans-serif;padding:1px 7px;border-radius:4px;margin-left:6px;vertical-align:1px}
+  .tag.new{background:var(--new-bg);color:var(--new)} .tag.gone{background:var(--gone-bg);color:var(--gone)} .tag.pre{background:var(--pre-bg);color:var(--pre)}
+  .unseen{position:relative}
+  .unseen::after{content:"";position:absolute;right:0;top:12px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .divider{text-align:center;color:var(--muted);font:600 13px Barlow,sans-serif;margin:16px 0 10px;border-top:1px dashed var(--line);line-height:0}
+  .divider span{background:var(--bg);padding:0 8px}
+
+  .toolbar{display:flex;gap:8px;margin-bottom:10px}
+  .toolbar input,.toolbar select{flex:1;border:1.5px solid var(--line);border-radius:8px;padding:9px 10px;font:inherit;background:var(--surface);color:var(--ink);min-width:0}
+  .toolbar select{flex:0 0 auto}
+  .empty{background:var(--surface);border-radius:10px;padding:22px 16px;color:var(--muted);text-align:center}
+  .empty b{color:var(--ink)}
+  footer{max-width:720px;margin:24px auto 0;padding:0 12px;color:var(--muted);font-size:13px}
+  footer a{color:inherit}
+  .btn{background:none;border:1.5px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 10px;font:600 13px Barlow,sans-serif;cursor:pointer}
+  @media (prefers-reduced-motion:no-preference){ .card{transition:border-color .2s} }
+</style>
+</head>
+<body>
+<header>
+  <h1>Diecastcompany.nl – hlídač</h1>
+  <small id="updated">Načítám…</small>
+</header>
+<main>
+  <div class="brands" id="brands"></div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="news">Novinky</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="catalog">Katalog</button>
+  </div>
+  <section id="news"></section>
+  <section id="catalog" hidden>
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="Hledat model, kód, barvu…" autocomplete="off">
+      <select id="st"><option value="">vše</option><option value="pre-order">jen pre-order</option><option value="current">jen skladem/aktuální</option></select>
+    </div>
+    <div id="catalogList"></div>
+  </section>
+</main>
+<footer>
+  <p>Značky se hlídají podle seznamu v <code>config.json</code> – chceš další, přidej ji tam. Upozornění chodí do Telegramu při každé změně.</p>
+  <p><button class="btn" id="markSeen">Označit vše jako viděné</button></p>
+</footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const LS = { get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } },
+             set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
+let DATA = {manufacturers:{}}, HIST = [];
+let selected = LS.get("brands", null);           // null = všechny
+let lastVisit = LS.get("lastVisit", "");
+let tab = "news";
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shortTitle = t => { const p = String(t||"").split(" - "); return p.slice(0, Math.max(1, p.length - 3)).join(" - "); }; // uřízne " - výrobce - ref - kód"
+const isOn = name => !selected || selected.includes(name);
+const fmtTime = s => { const [d,t] = s.split(" "); const [y,m,dd] = d.split("-"); return `${+dd}. ${+m}. ${y}${t ? " " + t : ""}`; };
+const statusTag = r => r.status === "pre-order" ? `<span class="tag pre">pre-order${r.available ? " · " + r.available : ""}</span>`
+                     : r.status && r.status !== "current" ? `<span class="tag pre">${esc(r.status)}</span>` : "";
+
+function itemHtml(r, extraTag = ""){
+  return `<a class="item" href="${esc(r.url)}" target="_blank" rel="noopener">
+    <span class="code">${esc(r.code)}</span>${extraTag}${statusTag(r)}
+    <span class="name">${esc(shortTitle(r.title))}</span></a>`;
+}
+
+function renderBrands(){
+  const names = Object.keys(DATA.manufacturers).sort((a,b)=>a.localeCompare(b));
+  const unseenBy = {};
+  for (const h of HIST) if (h.time > lastVisit) unseenBy[h.manufacturer] = (unseenBy[h.manufacturer]||0) + h.added.length;
+  $("#brands").innerHTML = names.map(n =>
+    `<button class="brand" aria-pressed="${isOn(n)}" data-b="${esc(n)}">${esc(n)}${unseenBy[n] ? `<b>+${unseenBy[n]}</b>` : ""}</button>`).join("");
+  $("#brands").onclick = e => {
+    const b = e.target.closest(".brand"); if (!b) return;
+    const n = b.dataset.b;
+    if (!selected) selected = names.slice();
+    selected = selected.includes(n) ? selected.filter(x => x !== n) : [...selected, n];
+    if (selected.length === names.length) selected = null;
+    LS.set("brands", selected); render();
+  };
+}
+
+function renderNews(){
+  const runs = HIST.filter(h => isOn(h.manufacturer));
+  if (!runs.length) { $("#news").innerHTML = `<div class="empty"><b>Zatím žádné změny.</b><br>Jakmile u vybraných značek něco přibude nebo zmizí, objeví se to tady.</div>`; return; }
+  let html = "", lastTime = null, dividerDone = !lastVisit;
+  for (const h of runs) {
+    if (!dividerDone && h.time <= lastVisit) { html += `<div class="divider"><span>viděno při minulé návštěvě</span></div>`; dividerDone = true; }
+    if (h.time !== lastTime) { html += `${lastTime ? "</div>" : ""}<div class="run"><h2>${fmtTime(h.time)}</h2>`; lastTime = h.time; }
+    const unseen = h.time > lastVisit ? " unseen" : "";
+    if (h.added.length) html += `<div class="card new${unseen}"><div class="who">${esc(h.manufacturer)} – přidáno ${h.added.length}</div>${h.added.map(r => itemHtml(r)).join("")}</div>`;
+    if (h.removed.length) html += `<div class="card gone${unseen}"><div class="who">${esc(h.manufacturer)} – zmizelo ${h.removed.length}</div>${h.removed.map(r => itemHtml(r, `<span class="tag gone">pryč</span>`)).join("")}</div>`;
+    if (h.changed.length) html += `<div class="card chg${unseen}"><div class="who">${esc(h.manufacturer)} – změna stavu ${h.changed.length}</div>${h.changed.map(c => itemHtml(c.new, `<span class="tag pre">${esc(c.old.status)} ${esc(c.old.available||"")} →</span>`)).join("")}</div>`;
+  }
+  $("#news").innerHTML = html + "</div>";
+}
+
+function renderCatalog(){
+  const q = $("#q").value.trim().toLowerCase(), st = $("#st").value;
+  let rows = [];
+  for (const [n, m] of Object.entries(DATA.manufacturers)) if (isOn(n)) rows.push(...m.items.map(r => ({...r, manufacturer:n})));
+  if (q) rows = rows.filter(r => (r.title + " " + r.code).toLowerCase().includes(q));
+  if (st) rows = rows.filter(r => st === "current" ? r.status !== "pre-order" : r.status === st);
+  rows.sort((a,b) => (b.first_seen||"").localeCompare(a.first_seen||"") || a.code.localeCompare(b.code));
+  const shown = rows.slice(0, 300);
+  $("#catalogList").innerHTML = rows.length
+    ? `<div class="card">${shown.map(r => itemHtml(r, r.first_seen > lastVisit && lastVisit ? `<span class="tag new">nové</span>` : "")).join("")}</div>
+       ${rows.length > shown.length ? `<div class="empty">Zobrazeno ${shown.length} z ${rows.length} – upřesni hledání.</div>` : ""}`
+    : `<div class="empty"><b>Nic nenalezeno.</b><br>Zkus jiný výraz nebo zapni další značky nahoře.</div>`;
+}
+
+function render(){ renderBrands(); if (tab === "news") renderNews(); else renderCatalog(); }
+
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
+  tab = t.dataset.tab;
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", x === t));
+  $("#news").hidden = tab !== "news"; $("#catalog").hidden = tab !== "catalog"; render();
+});
+$("#q").oninput = renderCatalog; $("#st").onchange = renderCatalog;
+$("#markSeen").onclick = () => { lastVisit = DATA.generated || new Date().toISOString(); LS.set("lastVisit", lastVisit); render(); };
+
+async function load(){
+  try {
+    const bust = "?t=" + Date.now();
+    const [d, h] = await Promise.all([fetch("data.json" + bust), fetch("history.json" + bust)]);
+    if (!d.ok) throw new Error("data.json " + d.status);
+    DATA = await d.json(); HIST = h.ok ? await h.json() : [];
+    $("#updated").textContent = "Naposledy zkontrolováno " + fmtTime(DATA.generated || "");
+    render();
+    // návštěvu si zapamatujeme až při odchodu, ať tečky vydrží po celou dobu prohlížení
+    addEventListener("pagehide", () => LS.set("lastVisit", DATA.generated || lastVisit));
+  } catch (e) {
+    $("#updated").textContent = "Data se nepodařilo načíst";
+    $("#news").innerHTML = `<div class="empty"><b>Ještě tu nejsou žádná data.</b><br>Hlídač zatím neproběhl, nebo nejsou soubory data.json a history.json ve složce docs. (${esc(e.message)})</div>`;
+  }
+}
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
+load();
+</script>
+</body>
+</html>
