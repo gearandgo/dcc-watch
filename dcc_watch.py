@@ -292,7 +292,7 @@ def fmt_item(r):
     return f"• {r['title']}{extra}\n  {r['url']}"
 
 
-def build_report(results, now):
+def build_report(results, now, include_changes=False):
     lines = [f"Diecastcompany.nl – změny k {now:%d.%m.%Y %H:%M}", ""]
     anything = False
     for name, d in results.items():
@@ -300,19 +300,21 @@ def build_report(results, now):
             lines.append(f"▪ {name}: první načtení, uloženo {d['count']} položek (příště už hlásím rozdíly)")
             lines.append("")
             continue
-        if not (d["added"] or d["removed"] or d["changed"]):
+        changed = d["changed"] if include_changes else []
+        if not (d["added"] or d["removed"] or changed):
             continue
         anything = True
-        lines.append(f"▪ {name}  (+{len(d['added'])} / −{len(d['removed'])} / ~{len(d['changed'])}, celkem {d['count']})")
+        lines.append(f"▪ {name}  (+{len(d['added'])} / −{len(d['removed'])}"
+                     + (f" / ~{len(changed)}" if include_changes else "") + f", celkem {d['count']})")
         if d["added"]:
             lines.append("  PŘIDÁNO:")
             lines += ["  " + fmt_item(r).replace("\n", "\n  ") for r in d["added"]]
         if d["removed"]:
             lines.append("  ZMIZELO:")
             lines += ["  " + fmt_item(r).replace("\n", "\n  ") for r in d["removed"]]
-        if d["changed"]:
+        if changed:
             lines.append("  ZMĚNA STAVU:")
-            for ch in d["changed"]:
+            for ch in changed:
                 o, n = ch["old"], ch["new"]
                 lines.append(f"  • {n['title']}: {o.get('status')} {o.get('available', '')} → "
                              f"{n['status']} {n.get('available', '')}\n    {n['url']}")
@@ -415,7 +417,7 @@ def main():
 
     save_json(STATE_PATH, state)
     write_site_data(state, results, now_s)
-    anything, report = build_report(results, now)
+    anything, report = build_report(results, now, include_changes=cfg.get("report_status_changes", False))
     print("\n" + report + "\n")
 
     REPORT_DIR.mkdir(exist_ok=True)
