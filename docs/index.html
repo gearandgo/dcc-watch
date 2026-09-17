@@ -22,8 +22,8 @@
   }}
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Barlow,system-ui,sans-serif;-webkit-text-size-adjust:100%}
-  header{background:var(--ink);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 12px;position:sticky;top:0;z-index:5}
-  header h1{margin:0;font:700 22px/1 "Barlow Semi Condensed",Barlow,sans-serif;letter-spacing:.01em}
+  header{background:#16213A;color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 12px;position:sticky;top:0;z-index:5}
+  header h1{margin:0;color:#fff;font:700 22px/1 "Barlow Semi Condensed",Barlow,sans-serif;letter-spacing:.01em}
   header small{display:block;margin-top:4px;color:#B8C0D4;font-size:13px}
   .hrow{display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:720px;margin:0 auto}
   .runbtn{flex:0 0 auto;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 12px;font:700 14px "Barlow Semi Condensed",sans-serif;cursor:pointer}
@@ -114,14 +114,15 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const shortTitle = t => { const p = String(t||"").split(" - "); return p.slice(0, Math.max(1, p.length - 3)).join(" - "); }; // uřízne " - výrobce - ref - kód"
 const isOn = name => !selected || selected.includes(name);
 const fmtTime = s => { const [d,t] = s.split(" "); const [y,m,dd] = d.split("-"); return `${+dd}. ${+m}. ${y}${t ? " " + t : ""}`; };
-const statusTag = r => r.status === "pre-order" ? `<span class="tag pre">pre-order${r.available ? " · " + r.available : ""}</span>`
-                     : r.status && r.status !== "current" ? `<span class="tag pre">${esc(r.status)}</span>` : "";
+const statusTag = (r, showCurrent) => r.status === "pre-order" ? `<span class="tag pre">pre-order${r.available ? " · " + r.available : ""}</span>`
+                     : r.status && r.status !== "current" ? `<span class="tag pre">${esc(r.status)}</span>`
+                     : showCurrent ? `<span class="tag new">aktuální</span>` : "";
 
-function itemHtml(r, extraTag = ""){
+function itemHtml(r, extraTag = "", showCurrent = false){
   const pic = r.image ? `<img src="${esc(r.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'noimg'}))">`
                       : `<span class="noimg"></span>`;
   return `<a class="item" href="${esc(r.url)}" target="_blank" rel="noopener">${pic}<span class="txt">
-    <span class="code">${esc(r.code)}</span>${extraTag}${statusTag(r)}
+    <span class="code">${esc(r.code)}</span>${extraTag}${statusTag(r, showCurrent)}
     <span class="name">${esc(shortTitle(r.title))}</span></span></a>`;
 }
 
@@ -156,7 +157,7 @@ function renderNews(){
     const unseen = h.time > lastVisit ? " unseen" : "";
     if (h.added.length) html += `<div class="card new${unseen}"><div class="who">${esc(h.manufacturer)} – přidáno ${h.added.length}</div>${h.added.map(r => itemHtml(r)).join("")}</div>`;
     if (h.removed.length) html += `<div class="card gone${unseen}"><div class="who">${esc(h.manufacturer)} – zmizelo ${h.removed.length}</div>${h.removed.map(r => itemHtml(r, `<span class="tag gone">pryč</span>`)).join("")}</div>`;
-    if (h.changed.length) html += `<div class="card chg${unseen}"><div class="who">${esc(h.manufacturer)} – změna stavu ${h.changed.length}</div>${h.changed.map(c => itemHtml(c.new, `<span class="tag pre">${esc(c.old.status)} ${esc(c.old.available||"")} →</span>`)).join("")}</div>`;
+    if (h.changed.length) html += `<div class="card chg${unseen}"><div class="who">${esc(h.manufacturer)} – změna stavu ${h.changed.length}</div>${h.changed.map(c => itemHtml(c.new, `<span class="tag pre">${esc(c.old.status === "current" ? "aktuální" : c.old.status)} ${esc(c.old.available||"")} →</span>`, true)).join("")}</div>`;
   }
   $("#news").innerHTML = html + "</div>";
 }
