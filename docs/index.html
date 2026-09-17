@@ -38,6 +38,12 @@
   .brand.ctl{border-style:dashed;color:var(--muted)}
   .brand:focus-visible,.tab:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
+  .kinds{display:flex;gap:6px;margin:0 0 12px}
+  .kind{flex:1;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);border-radius:8px;padding:7px 4px;font:600 14px Barlow,sans-serif;cursor:pointer}
+  .kind[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+  .kind[aria-pressed="true"][data-k="added"]{border-color:var(--new);color:var(--new)}
+  .kind[aria-pressed="true"][data-k="removed"]{border-color:var(--gone);color:var(--gone)}
+  .kind[aria-pressed="true"][data-k="changed"]{border-color:var(--pre);color:var(--pre)}
   .tabs{display:flex;border-bottom:2px solid var(--line);margin-bottom:12px}
   .tab{flex:1;background:none;border:0;padding:10px 4px;font:700 16px "Barlow Semi Condensed",sans-serif;color:var(--muted);cursor:pointer;margin-bottom:-2px;border-bottom:2px solid transparent}
   .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
@@ -87,7 +93,14 @@
     <button class="tab" role="tab" aria-selected="true" data-tab="news">Novinky</button>
     <button class="tab" role="tab" aria-selected="false" data-tab="catalog">Katalog</button>
   </div>
-  <section id="news"></section>
+  <section id="news">
+    <div class="kinds" id="kinds">
+      <button class="kind" data-k="added">Přidáno</button>
+      <button class="kind" data-k="removed">Zmizelo</button>
+      <button class="kind" data-k="changed">Změna stavu</button>
+    </div>
+    <div id="newsList"></div>
+  </section>
   <section id="catalog" hidden>
     <div class="toolbar">
       <input id="q" type="search" placeholder="Hledat model, kód, barvu…" autocomplete="off">
@@ -109,6 +122,7 @@ let DATA = {manufacturers:{}}, HIST = [];
 let selected = LS.get("brands", null);           // null = všechny
 let lastVisit = LS.get("lastVisit", "");
 let tab = "news";
+let kinds = LS.get("kinds", {added: true, removed: true, changed: false});
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const shortTitle = t => { const p = String(t||"").split(" - "); return p.slice(0, Math.max(1, p.length - 3)).join(" - "); }; // uřízne " - výrobce - ref - kód"
@@ -148,18 +162,20 @@ function renderBrands(){
 }
 
 function renderNews(){
-  const runs = HIST.filter(h => isOn(h.manufacturer));
-  if (!runs.length) { $("#news").innerHTML = `<div class="empty"><b>Zatím žádné změny.</b><br>Jakmile u vybraných značek něco přibude nebo zmizí, objeví se to tady.</div>`; return; }
+  document.querySelectorAll(".kind").forEach(b => b.setAttribute("aria-pressed", !!kinds[b.dataset.k]));
+  const runs = HIST.filter(h => isOn(h.manufacturer) &&
+    ((kinds.added && h.added.length) || (kinds.removed && h.removed.length) || (kinds.changed && h.changed.length)));
+  if (!runs.length) { $("#newsList").innerHTML = `<div class="empty"><b>Zatím žádné změny.</b><br>Jakmile u vybraných značek něco přibude nebo zmizí, objeví se to tady.</div>`; return; }
   let html = "", lastTime = null, dividerDone = !lastVisit;
   for (const h of runs) {
     if (!dividerDone && h.time <= lastVisit) { html += `<div class="divider"><span>viděno při minulé návštěvě</span></div>`; dividerDone = true; }
     if (h.time !== lastTime) { html += `${lastTime ? "</div>" : ""}<div class="run"><h2>${fmtTime(h.time)}</h2>`; lastTime = h.time; }
     const unseen = h.time > lastVisit ? " unseen" : "";
-    if (h.added.length) html += `<div class="card new${unseen}"><div class="who">${esc(h.manufacturer)} – přidáno ${h.added.length}</div>${h.added.map(r => itemHtml(r)).join("")}</div>`;
-    if (h.removed.length) html += `<div class="card gone${unseen}"><div class="who">${esc(h.manufacturer)} – zmizelo ${h.removed.length}</div>${h.removed.map(r => itemHtml(r, `<span class="tag gone">pryč</span>`)).join("")}</div>`;
-    if (h.changed.length) html += `<div class="card chg${unseen}"><div class="who">${esc(h.manufacturer)} – změna stavu ${h.changed.length}</div>${h.changed.map(c => itemHtml(c.new, `<span class="tag pre">${esc(c.old.status === "current" ? "aktuální" : c.old.status)} ${esc(c.old.available||"")} →</span>`, true)).join("")}</div>`;
+    if (kinds.added && h.added.length) html += `<div class="card new${unseen}"><div class="who">${esc(h.manufacturer)} – přidáno ${h.added.length}</div>${h.added.map(r => itemHtml(r)).join("")}</div>`;
+    if (kinds.removed && h.removed.length) html += `<div class="card gone${unseen}"><div class="who">${esc(h.manufacturer)} – zmizelo ${h.removed.length}</div>${h.removed.map(r => itemHtml(r, `<span class="tag gone">pryč</span>`)).join("")}</div>`;
+    if (kinds.changed && h.changed.length) html += `<div class="card chg${unseen}"><div class="who">${esc(h.manufacturer)} – změna stavu ${h.changed.length}</div>${h.changed.map(c => itemHtml(c.new, `<span class="tag pre">${esc(c.old.status === "current" ? "aktuální" : c.old.status)} ${esc(c.old.available||"")} →</span>`, true)).join("")}</div>`;
   }
-  $("#news").innerHTML = html + "</div>";
+  $("#newsList").innerHTML = html + "</div>";
 }
 
 function renderCatalog(){
@@ -183,6 +199,7 @@ document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
   document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", x === t));
   $("#news").hidden = tab !== "news"; $("#catalog").hidden = tab !== "catalog"; render();
 });
+$("#kinds").onclick = e => { const b = e.target.closest(".kind"); if (!b) return; kinds[b.dataset.k] = !kinds[b.dataset.k]; LS.set("kinds", kinds); renderNews(); };
 $("#q").oninput = renderCatalog; $("#st").onchange = renderCatalog;
 // --- ruční spuštění hlídače přes GitHub Actions ---
 const REPO = "gearandgo/dcc-watch", WORKFLOW = "watch.yml";
@@ -245,7 +262,7 @@ async function load(){
     addEventListener("pagehide", () => LS.set("lastVisit", DATA.generated || lastVisit));
   } catch (e) {
     $("#updated").textContent = "Data se nepodařilo načíst";
-    $("#news").innerHTML = `<div class="empty"><b>Ještě tu nejsou žádná data.</b><br>Hlídač zatím neproběhl, nebo nejsou soubory data.json a history.json ve složce docs. (${esc(e.message)})</div>`;
+    $("#newsList").innerHTML = `<div class="empty"><b>Ještě tu nejsou žádná data.</b><br>Hlídač zatím neproběhl, nebo nejsou soubory data.json a history.json ve složce docs. (${esc(e.message)})</div>`;
   }
 }
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
