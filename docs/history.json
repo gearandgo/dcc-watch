@@ -1,5 +1,1572 @@
 [
  {
+  "time": "2026-09-22 11:02",
+  "manufacturer": "Spark",
+  "added": [
+   {
+    "code": "spa64S270",
+    "title": "BMW  - M4 2024 various - 1:64 - Spark - 64S270 - spa64S270",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/spa64S270",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361419_1.jpg"
+   },
+   {
+    "code": "spa64S265",
+    "title": "BMW  - M4 2026 various - 1:64 - Spark - 64S265 - spa64S265",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/spa64S265",
+    "image": "https://www.diecastcompany.nl/diecast/images/no_picture.jpg"
+   },
+   {
+    "code": "spa64S264",
+    "title": "BMW  - M4 2026 various - 1:64 - Spark - 64S264 - spa64S264",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/spa64S264",
+    "image": "https://www.diecastcompany.nl/diecast/images/no_picture.jpg"
+   },
+   {
+    "code": "spa64S177",
+    "title": "Mercedes Benz AMG - LMGT3  2026 silver/red - 1:64 - Spark - 64S177 - spa64S177",
+    "status": "pre-order",
+    "available": "May 2027",
+    "url": "https://www.diecastcompany.nl/article/spa64S177",
+    "image": "https://www.diecastcompany.nl/diecast/images/no_picture.jpg"
+   },
+   {
+    "code": "spa18S1267",
+    "title": "McLaren  - MCL40 2026 orange - 1:18 - Spark - 18S1267 - spa18S1267",
+    "status": "pre-order",
+    "available": "September 2026",
+    "url": "https://www.diecastcompany.nl/article/spa18S1267",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.358/358075_1.jpg"
+   },
+   {
+    "code": "spa5HF237",
+    "title": "Helmet  - Oscar Piastri 2025 red - 1:5 - Spark - 5HF237 - spa5HF237",
+    "status": "pre-order",
+    "available": "September 2026",
+    "url": "https://www.diecastcompany.nl/article/spa5HF237",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.355/355486_1.jpg"
+   },
+   {
+    "code": "spaS9594",
+    "title": "Red Bull Racing   - RB21 2025 white/red - 1:43 - Spark - S9594 - spaS9594",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/spaS9594",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.347/347629_1.jpg"
+   },
+   {
+    "code": "spa18S907",
+    "title": "Mercedes Benz Petronas - F1 W14 E Performance 2023 black/turquoise - 1:18 - Spark - 18S907 - spa18S907",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/spa18S907",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.331/331604_1.jpg"
+   }
+  ],
+  "removed": [
+   {
+    "code": "spa64S180",
+    "title": "Oracle  - 07 2026 red - 1:64 - Spark - 64S180 - spa64S180",
+    "status": "pre-order",
+    "available": "April 2027",
+    "url": "https://www.diecastcompany.nl/article/spa64S180",
+    "image": "https://www.diecastcompany.nl/diecast/images/no_picture.jpg",
+    "first_seen": "2026-09-17 11:28",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "spa18S1256",
+    "title": "Cadillac  - MAC-26 2026 white/black - 1:18 - Spark - 18S1256 - spa18S1256",
+    "status": "pre-order",
+    "available": "December 2026",
+    "url": "https://www.diecastcompany.nl/article/spa18S1256",
+    "image": "https://www.diecastcompany.nl/diecast/images/no_picture.jpg",
+    "first_seen": "2026-09-17 11:28",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "spa64SGT25333",
+    "title": "Aston Martin  - Vantage GT3 2025 white/green - 1:64 - Spark - 64SGT25333 - spa64SGT25333",
+    "status": "pre-order",
+    "available": "September 2026",
+    "url": "https://www.diecastcompany.nl/article/spa64SGT25333",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.355/355491_1.jpg",
+    "first_seen": "2026-09-17 11:28",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "spaY421",
+    "title": "Mercedes Benz  - W16 2025 grey - 1:64 - Spark - Y421 - spaY421",
+    "status": "pre-order",
+    "available": "September 2026",
+    "url": "https://www.diecastcompany.nl/article/spaY421",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.347/347638_1.jpg",
+    "first_seen": "2026-09-17 11:28",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "spa18s972",
+    "title": "Red Bull Racing  Oracle - RB19 2023 blue/red/yellow - 1:18 - Spark - 18s972 - spa18s972",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/spa18s972",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.333/333522_1.jpg",
+    "first_seen": "2026-09-17 11:28",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   }
+  ],
+  "changed": []
+ },
+ {
+  "time": "2026-09-22 11:02",
+  "manufacturer": "GT Spirit",
+  "added": [],
+  "removed": [],
+  "changed": [
+   {
+    "old": {
+     "code": "GT977",
+     "title": "McLaren  - F1 Roadcar 1992 orange - 1:18 - GT Spirit - GT977 - GT977",
+     "status": "pre-order",
+     "available": "October 2026",
+     "url": "https://www.diecastcompany.nl/article/GT977",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358579_1.jpg",
+     "first_seen": "2026-09-17 11:28",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "GT977",
+     "title": "McLaren  - F1 Roadcar 1992 orange - 1:18 - GT Spirit - GT977 - GT977",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/GT977",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358579_1.jpg"
+    }
+   }
+  ]
+ },
+ {
+  "time": "2026-09-22 11:02",
+  "manufacturer": "Black Box Diorama",
+  "added": [],
+  "removed": [],
+  "changed": [
+   {
+    "old": {
+     "code": "MC642002",
+     "title": "diorama Accessoires - Parking stand grey - 1:64 - Black Box Diorama - MC642002 - MC642002",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MC642002",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357501_1.jpg",
+     "first_seen": "2026-09-17 11:28",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "MC642002",
+     "title": "diorama Accessoires - Parking stand grey - 1:64 - Black Box Diorama - MC642002 - MC642002",
+     "status": "pre-order",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MC642002",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357501_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "MO914414",
+     "title": "diorama Accessoires - Bus station with light various - 1:64 - Black Box Diorama - MO914414 - MO914414",
+     "status": "pre-order",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MO914414",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357494_1.jpg",
+     "first_seen": "2026-09-17 11:28",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "MO914414",
+     "title": "diorama Accessoires - Bus station with light various - 1:64 - Black Box Diorama - MO914414 - MO914414",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MO914414",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357494_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "MB400225",
+     "title": "diorama Accessoires - Container Workshop various - 1:64 - Black Box Diorama - MB400225 - MB400225",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MB400225",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357486_1.jpg",
+     "first_seen": "2026-09-17 11:28",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "MB400225",
+     "title": "diorama Accessoires - Container Workshop various - 1:64 - Black Box Diorama - MB400225 - MB400225",
+     "status": "pre-order",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MB400225",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357486_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "MO400223",
+     "title": "diorama Accessoires - Multi-story car park container various - 1:64 - Black Box Diorama - MO400223 - MO400223",
+     "status": "pre-order",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MO400223",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354185_1.jpg",
+     "first_seen": "2026-09-17 11:28",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "MO400223",
+     "title": "diorama Accessoires - Multi-story car park container various - 1:64 - Black Box Diorama - MO400223 - MO400223",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/MO400223",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354185_1.jpg"
+    }
+   }
+  ]
+ },
+ {
+  "time": "2026-09-22 11:02",
+  "manufacturer": "Hotwheels",
+  "added": [
+   {
+    "code": "hwmvJBL09",
+    "title": "Lamborghini  - Temerario  green - 1:64 - Hotwheels - JBL09 - hwmvJBL09",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJBL09",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.359/359892_1.jpg"
+   },
+   {
+    "code": "hwmvJKF30",
+    "title": "BMW  - M3 green - 1:64 - Hotwheels - JKF30 - hwmvJKF30",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJKF30",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.357/357629_1.jpg"
+   },
+   {
+    "code": "hwmvJBK67",
+    "title": "Chevrolet  - Chevelle SS Wagon 1970 yellow - 1:64 - Hotwheels - JBK67 - hwmvJBK67",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJBK67",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.355/355740_1.jpg"
+   },
+   {
+    "code": "hwmvJLJ49",
+    "title": "Corvette  - C7 Z06 2016 yellow - 1:43 - Hotwheels - JLJ49 - hwmvJLJ49",
+    "status": "pre-order",
+    "available": "October 2026",
+    "url": "https://www.diecastcompany.nl/article/hwmvJLJ49",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.354/354242_1.jpg"
+   },
+   {
+    "code": "hwmv5785-97KD~72",
+    "title": "Assortment/ Mix  - 2026 various - 1:64 - Hotwheels - 5785-97KD - hwmv5785-97KD",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmv5785-97KD~72",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.353/353375_1.jpg"
+   },
+   {
+    "code": "hwmvJKD81",
+    "title": "McLaren  - black/orange - 1:64 - Hotwheels - JKD81 - hwmvJKD81",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJKD81",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.352/352978_1.jpg"
+   },
+   {
+    "code": "hwacc183034",
+    "title": "Accessoires  - Legends Tour black - Hotwheels - 183034 - hwacc183034",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwacc183034",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.352/352145_1.jpg"
+   },
+   {
+    "code": "hwacc181320~6",
+    "title": "Accessoires  - Retro mug white/green - Hotwheels - hwacc181320~6 - hwacc181320",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwacc181320~6",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.348/348945_1.jpg"
+   },
+   {
+    "code": "hwmvJGF58",
+    "title": "Assortment/ Mix  - Race Team 2024 various - 1:64 - Hotwheels - JGF58 - hwmvJGF58",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJGF58",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.347/347160_1.jpg"
+   },
+   {
+    "code": "hwmvHXD63-979K~10",
+    "title": "Assortment/ Mix  - Pop Culture 979K various - 1:64 - Hotwheels - HXD63 - hwmvHXD63-979K",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvHXD63-979K~10",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.343/343013_1.jpg"
+   },
+   {
+    "code": "hwmvHRV73",
+    "title": "Nissan  - Z GT4 2023 white/red - 1:64 - Hotwheels - HRV73 - hwmvHRV73",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvHRV73",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.340/340529_1.jpg"
+   },
+   {
+    "code": "hwmvFPY86-976H~10",
+    "title": "Assortment/ Mix  - Off Road Car Culture series various - 1:64 - Hotwheels - FPY86 - hwmvFPY86-976H",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvFPY86-976H~10",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.331/331526_1.jpg"
+   }
+  ],
+  "removed": [
+   {
+    "code": "hwmvHRT63",
+    "title": "Mercedes Benz  - 500 SLC Rallye 1980 silver - 1:64 - Hotwheels - HRT63 - hwmvHRT63",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvHRT63",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.359/359890_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvJBK74",
+    "title": "Land Rover  - Defender 90 yellow - 1:64 - Hotwheels - JBK74 - hwmvJBK74",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJBK74",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.355/355739_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvJLJ48",
+    "title": "Ford  - GT 2016 blue - 1:43 - Hotwheels - JLJ48 - hwmvJLJ48",
+    "status": "pre-order",
+    "available": "October 2026",
+    "url": "https://www.diecastcompany.nl/article/hwmvJLJ48",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.354/354241_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvHJV98-979S",
+    "title": "Assortment/ Mix  - CC & TT Factory Set 1 2026 various - 1:64 - Hotwheels - HJV98-979S - hwmvHJV98-979S",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvHJV98-979S",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.353/353371_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvJHW62",
+    "title": "BMW  - M5 (E60) (F6) black - 1:64 - Hotwheels - JHW62 - hwmvJHW62",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJHW62",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.353/353052_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvJKD79",
+    "title": "Honda  - VCARB various - 1:64 - Hotwheels - JKD79 - hwmvJKD79",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJKD79",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.352/352976_2.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwacc183010",
+    "title": "Accessoires  - Legends Tour black/yellow - Hotwheels - 183010 - hwacc183010",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwacc183010",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.352/352141_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwacc181184~10",
+    "title": "Accessoires  - Coasters round set beige/green/red/brown - Hotwheels - hwacc181266~10 - hwacc181184",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwacc181184~10",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.348/348943_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvHNW46-979M~5",
+    "title": "Assortment/ Mix  - F&F  various - 1:64 - Hotwheels - HNW46 - hwmvHNW46-979M",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvHNW46-979M~5",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.347/347153_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvHXD63-979H~10",
+    "title": "Assortment/ Mix  - Pop Culture 979H various - 1:64 - Hotwheels - HXD63 - hwmvHXD63-979H",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvHXD63-979H~10",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.343/343011_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvHRV44",
+    "title": "Nissan  - 300 ZX GTS & Euro Hauler 1994 red/blue - 1:64 - Hotwheels - HRV44 - hwmvHRV44",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvHRV44",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.340/340476_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvFPY86-976E~10",
+    "title": "Assortment/ Mix  - Car Culture series various - 1:64 - Hotwheels - FPY86 - hwmvFPY86-976E",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvFPY86-976E~10",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.331/331520_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvJKY34",
+    "title": "Porsche  - 911 1971 blue - 1:64 - Hotwheels - JKY34 - hwmvJKY34",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJKY34",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.359/359957_1.jpg",
+    "first_seen": "2026-09-20 05:02",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "hwmvJKY14",
+    "title": "Pontiac  - GTO  1966 red - 1:64 - Hotwheels - JKY14 - hwmvJKY14",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/hwmvJKY14",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.359/359913_1.jpg",
+    "first_seen": "2026-09-20 05:02",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   }
+  ],
+  "changed": [
+   {
+    "old": {
+     "code": "hwmvJKD96",
+     "title": "Williams  - various - 1:64 - Hotwheels - JKD96 - hwmvJKD96",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvJKD96",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354369_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvJKD96",
+     "title": "Williams  - various - 1:64 - Hotwheels - JKD96 - hwmvJKD96",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvJKD96",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354369_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvJHW66",
+     "title": "Lexus  - LFA grey metallic - 1:64 - Hotwheels - JHW66 - hwmvJHW66",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvJHW66",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354366_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvJHW66",
+     "title": "Lexus  - LFA grey metallic - 1:64 - Hotwheels - JHW66 - hwmvJHW66",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvJHW66",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354366_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvJKF38",
+     "title": "Mercedes Benz  - G Class 1993 blue - 1:64 - Hotwheels - JKF38 - hwmvJKF38",
+     "status": "pre-order",
+     "available": "October 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvJKF38",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354355_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvJKF38",
+     "title": "Mercedes Benz  - G Class 1993 blue - 1:64 - Hotwheels - JKF38 - hwmvJKF38",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvJKF38",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354355_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvJKF07",
+     "title": "Subaru  - Legacy GT (BP) blue - 1:64 - Hotwheels - JKF07 - hwmvJKF07",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvJKF07",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354354_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvJKF07",
+     "title": "Subaru  - Legacy GT (BP) blue - 1:64 - Hotwheels - JKF07 - hwmvJKF07",
+     "status": "pre-order",
+     "available": "October 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvJKF07",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354354_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvJLJ51",
+     "title": "non  - Small Bloc cream - 1:43 - Hotwheels - JLJ51 - hwmvJLJ51",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvJLJ51",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354244_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvJLJ51",
+     "title": "non  - Small Bloc cream - 1:43 - Hotwheels - JLJ51 - hwmvJLJ51",
+     "status": "pre-order",
+     "available": "October 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvJLJ51",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354244_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvJLJ50",
+     "title": "non  - Erikenstein Rod blue/ornage - 1:43 - Hotwheels - JLJ50 - hwmvJLJ50",
+     "status": "pre-order",
+     "available": "October 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvJLJ50",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354243_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvJLJ50",
+     "title": "non  - Erikenstein Rod blue/ornage - 1:43 - Hotwheels - JLJ50 - hwmvJLJ50",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvJLJ50",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354243_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmv5785-97KQ~72",
+     "title": "Assortment/ Mix  - 2026 various - 1:64 - Hotwheels - 5785-97KQ - hwmv5785-97KQ",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmv5785-97KQ~72",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353386_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmv5785-97KQ~72",
+     "title": "Assortment/ Mix  - 2026 various - 1:64 - Hotwheels - 5785-97KQ - hwmv5785-97KQ",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmv5785-97KQ~72",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353386_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmv5785-97KP~72",
+     "title": "Assortment/ Mix  - 2026 various - 1:64 - Hotwheels - 5785-97KP - hwmv5785-97KP",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmv5785-97KP~72",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353385_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmv5785-97KP~72",
+     "title": "Assortment/ Mix  - 2026 various - 1:64 - Hotwheels - 5785-97KP - hwmv5785-97KP",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmv5785-97KP~72",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353385_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvGDG83-977N~24",
+     "title": "Assortment/ Mix  - Monsters  mix various - 1:64 - Hotwheels - GDG83 - hwmvGDG83-977N",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvGDG83-977N~24",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353360_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvGDG83-977N~24",
+     "title": "Assortment/ Mix  - Monsters  mix various - 1:64 - Hotwheels - GDG83 - hwmvGDG83-977N",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvGDG83-977N~24",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353360_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvFPY86-976V~10",
+     "title": "Assortment/ Mix  - Road Trippin various - 1:64 - Hotwheels - FPY86 - hwmvFPY86-976V",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvFPY86-976V~10",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353073_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvFPY86-976V~10",
+     "title": "Assortment/ Mix  - Road Trippin various - 1:64 - Hotwheels - FPY86 - hwmvFPY86-976V",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvFPY86-976V~10",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353073_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "hwmvGJT68-978J~10",
+     "title": "Assortment/ Mix  - Boulevard series  various - 1:64 - Hotwheels - GJT68 - hwmvGJT68-978J",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/hwmvGJT68-978J~10",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353063_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "hwmvGJT68-978J~10",
+     "title": "Assortment/ Mix  - Boulevard series  various - 1:64 - Hotwheels - GJT68 - hwmvGJT68-978J",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/hwmvGJT68-978J~10",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353063_1.jpg"
+    }
+   }
+  ]
+ },
+ {
+  "time": "2026-09-22 11:02",
+  "manufacturer": "Pop Race Limited",
+  "added": [
+   {
+    "code": "PRDC020",
+    "title": "Porsche  - Singer DLS Turbo dark chrome - 1:64 - Pop Race Limited - PRDC020 - PRDC020",
+    "status": "pre-order",
+    "available": "June 2027",
+    "url": "https://www.diecastcompany.nl/article/PRDC020",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361423_1.jpg"
+   },
+   {
+    "code": "PRDC019",
+    "title": "Honda  - Pandem S2000 dark chrome - 1:64 - Pop Race Limited - PRDC019 - PRDC019",
+    "status": "pre-order",
+    "available": "June 2027",
+    "url": "https://www.diecastcompany.nl/article/PRDC019",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361422_1.jpg"
+   },
+   {
+    "code": "PRDC018",
+    "title": "Nissan  - R34 Wagon dark chrome - 1:64 - Pop Race Limited - PRDC018 - PRDC018",
+    "status": "pre-order",
+    "available": "June 2027",
+    "url": "https://www.diecastcompany.nl/article/PRDC018",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361421_1.jpg"
+   },
+   {
+    "code": "PRDC017",
+    "title": "Honda  - NSX-R dark chrome - 1:64 - Pop Race Limited - PRDC017 - PRDC017",
+    "status": "pre-order",
+    "available": "June 2027",
+    "url": "https://www.diecastcompany.nl/article/PRDC017",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361420_1.jpg"
+   },
+   {
+    "code": "PR640525",
+    "title": "Lamborghini  - Centenario blue - 1:64 - Pop Race Limited - PR640525 - PR640525",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/PR640525",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.358/358872_1.jpg"
+   },
+   {
+    "code": "PR640456",
+    "title": "Toyota  - Supra black/green - 1:64 - Pop Race Limited - PR640456 - PR640456",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/PR640456",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.354/354913_1.jpg"
+   },
+   {
+    "code": "PR640345",
+    "title": "Nissan  - Skyline C210 dark green - 1:64 - Pop Race Limited - PR640345 - PR640345",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/PR640345",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.350/350010_1.jpg"
+   }
+  ],
+  "removed": [
+   {
+    "code": "PR640472",
+    "title": "Mazda  - RX-7 (FD3S) blue - 1:64 - Pop Race Limited - PR640472 - PR640472",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/PR640472",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.359/359117_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "PRBB001",
+    "title": "Toyota  - GR 86 various - 1:64 - Pop Race Limited - PR640EVAR - PRBB001",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/PRBB001",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.355/355055_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "PR640357",
+    "title": "Nissan  - Skyline GT-R R32 ghost chameleon - 1:64 - Pop Race Limited - PR640357 - PR640357",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/PR640357",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.350/350771_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   }
+  ],
+  "changed": []
+ },
+ {
+  "time": "2026-09-22 11:02",
+  "manufacturer": "Tarmac",
+  "added": [],
+  "removed": [],
+  "changed": [
+   {
+    "old": {
+     "code": "TC-T64-097-BLK",
+     "title": "Nissan  - Skyline 2025 black - 1:64 - Tarmac - T64-097-BLK - TC-T64-097-BLK",
+     "status": "pre-order",
+     "available": "February 2027",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-097-BLK",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.361/361312_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-097-BLK",
+     "title": "Nissan  - Skyline 2025 black - 1:64 - Tarmac - T64-097-BLK - TC-T64-097-BLK",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-097-BLK",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.361/361312_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-030-PRE",
+     "title": "Bentley  - Continental  2018 silver/green - 1:64 - Tarmac - T64-030-PRE - TC-T64-030-PRE",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-030-PRE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.361/361307_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-030-PRE",
+     "title": "Bentley  - Continental  2018 silver/green - 1:64 - Tarmac - T64-030-PRE - TC-T64-030-PRE",
+     "status": "pre-order",
+     "available": "February 2027",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-030-PRE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.361/361307_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-076-WH-BL",
+     "title": "Mitsubishi  - Lancer 1996 white - 1:64 - Tarmac - T64G-076-WH-Bl - TC-T64G-076-WH-BL",
+     "status": "pre-order",
+     "available": "January 2027",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-076-WH-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.361/361074_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-076-WH-BL",
+     "title": "Mitsubishi  - Lancer 1996 white - 1:64 - Tarmac - T64G-076-WH-Bl - TC-T64G-076-WH-BL",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-076-WH-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.361/361074_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-085-24FR05",
+     "title": "Toyota  - Yaris 2024 white/red/black - 1:64 - Tarmac - T64-085-24FR05 - TC-T64-085-24FR05",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-085-24FR05",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360773_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-085-24FR05",
+     "title": "Toyota  - Yaris 2024 white/red/black - 1:64 - Tarmac - T64-085-24FR05 - TC-T64-085-24FR05",
+     "status": "pre-order",
+     "available": "January 2027",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-085-24FR05",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360773_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-TC-LBC-B03",
+     "title": "Trading Cards  - Liberty Walk Collection Vol.03 various - Tarmac - TC-LBC-B03 - TC-TC-LBC-B03",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-TC-LBC-B03",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360680_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-TC-LBC-B03",
+     "title": "Trading Cards  - Liberty Walk Collection Vol.03 various - Tarmac - TC-LBC-B03 - TC-TC-LBC-B03",
+     "status": "pre-order",
+     "available": "September 2027",
+     "url": "https://www.diecastcompany.nl/article/TC-TC-LBC-B03",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360680_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64T-TL002-TS",
+     "title": "Mitsubishi  - Fuso Canter various - 1:64 - Tarmac - T64T-TL002-TS - TC-T64T-TL002-TS",
+     "status": "pre-order",
+     "available": "January 2027",
+     "url": "https://www.diecastcompany.nl/article/TC-T64T-TL002-TS",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360613_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64T-TL002-TS",
+     "title": "Mitsubishi  - Fuso Canter various - 1:64 - Tarmac - T64T-TL002-TS - TC-T64T-TL002-TS",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64T-TL002-TS",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360613_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64MC-023-RE",
+     "title": "Porsche  - GT3RS 2025 red - 1:64 - Tarmac - T64MC-023-RE - TC-T64MC-023-RE",
+     "status": "pre-order",
+     "available": "December 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64MC-023-RE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360375_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64MC-023-RE",
+     "title": "Porsche  - GT3RS 2025 red - 1:64 - Tarmac - T64MC-023-RE - TC-T64MC-023-RE",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64MC-023-RE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360375_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-TL089-BL",
+     "title": "Kimera  - EVO37 2021 blue - 1:64 - Tarmac - T64G-TL089-BL - TC-T64G-TL089-BL",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-TL089-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360365_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-TL089-BL",
+     "title": "Kimera  - EVO37 2021 blue - 1:64 - Tarmac - T64G-TL089-BL - TC-T64G-TL089-BL",
+     "status": "pre-order",
+     "available": "December 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-TL089-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.360/360365_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-035-25BJ500",
+     "title": "Nissan  - GT-R R35 Nismo GT3 2025 blue - 1:64 - Tarmac - T64-035-25BJ500 - TC-T64-035-25BJ500",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-035-25BJ500",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.359/359058_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-035-25BJ500",
+     "title": "Nissan  - GT-R R35 Nismo GT3 2025 blue - 1:64 - Tarmac - T64-035-25BJ500 - TC-T64-035-25BJ500",
+     "status": "pre-order",
+     "available": "November 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-035-25BJ500",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.359/359058_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-085-PM-BL",
+     "title": "Porsche  - 928 S 1992 platinum metallic - 1:64 - Tarmac - T64G-085-PM-BL - TC-T64G-085-PM-BL",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-085-PM-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358771_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-085-PM-BL",
+     "title": "Porsche  - 928 S 1992 platinum metallic - 1:64 - Tarmac - T64G-085-PM-BL - TC-T64G-085-PM-BL",
+     "status": "pre-order",
+     "available": "October 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-085-PM-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358771_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-043 25MGP36",
+     "title": "Audi  - R8 2025 various - 1:64 - Tarmac - T64-043 25MGP36 - TC-T64-043 25MGP36",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-043 25MGP36",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358570_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-043 25MGP36",
+     "title": "Audi  - R8 2025 various - 1:64 - Tarmac - T64-043 25MGP36 - TC-T64-043 25MGP36",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-043 25MGP36",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358570_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-105-WH",
+     "title": "Nissan  - GT-R 2026 white - 1:64 - Tarmac - T64-105-WH - TC-T64-105-WH",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-105-WH",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358566_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-105-WH",
+     "title": "Nissan  - GT-R 2026 white - 1:64 - Tarmac - T64-105-WH - TC-T64-105-WH",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-105-WH",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358566_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-049-BL",
+     "title": "Mitsubishi  - Lancer GSR Evolution 2 1994 blue - 1:64 - Tarmac - T64G-049-BL - TC-T64G-049-BL",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-049-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358350_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-049-BL",
+     "title": "Mitsubishi  - Lancer GSR Evolution 2 1994 blue - 1:64 - Tarmac - T64G-049-BL - TC-T64G-049-BL",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-049-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.358/358350_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-073-RE-BL",
+     "title": "Nissan  - S Cargo 1995 red - 1:64 - Tarmac - T64G-073-RE-B - TC-T64G-073-RE-BL",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-073-RE-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357598_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-073-RE-BL",
+     "title": "Nissan  - S Cargo 1995 red - 1:64 - Tarmac - T64G-073-RE-B - TC-T64G-073-RE-BL",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-073-RE-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357598_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-067-GR-BL",
+     "title": "Saab  - 900 1997 dark green - 1:64 - Tarmac - T64G-067-GR-B - TC-T64G-067-GR-BL",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-067-GR-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357594_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-067-GR-BL",
+     "title": "Saab  - 900 1997 dark green - 1:64 - Tarmac - T64G-067-GR-B - TC-T64G-067-GR-BL",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-067-GR-BL",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.357/357594_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T43-027-24MGP30",
+     "title": "Audi  - R8 LMS GT3 Evo II 2024 various - 1:43 - Tarmac - T43-027-24MGP30 - TC-T43-027-24MGP30",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T43-027-24MGP30",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.350/350030_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T43-027-24MGP30",
+     "title": "Audi  - R8 LMS GT3 Evo II 2024 various - 1:43 - Tarmac - T43-027-24MGP30 - TC-T43-027-24MGP30",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T43-027-24MGP30",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.350/350030_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-090-WH",
+     "title": "Nissan  - GT-R R35 2025 white/red/black - 1:64 - Tarmac - T64-090-WH - TC-T64-090-WH",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-090-WH",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.355/355882_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-090-WH",
+     "title": "Nissan  - GT-R R35 2025 white/red/black - 1:64 - Tarmac - T64-090-WH - TC-T64-090-WH",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-090-WH",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.355/355882_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-083-RE",
+     "title": "Porsche  - 928 S red - 1:64 - Tarmac - T64G-083-RE - TC-T64G-083-RE",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-083-RE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.355/355040_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-083-RE",
+     "title": "Porsche  - 928 S red - 1:64 - Tarmac - T64G-083-RE - TC-T64G-083-RE",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-083-RE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.355/355040_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-086-RE",
+     "title": "Ford  - Mustang GTD red - 1:64 - Tarmac - T64G-086-RE - TC-T64G-086-RE",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-086-RE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354778_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-086-RE",
+     "title": "Ford  - Mustang GTD red - 1:64 - Tarmac - T64G-086-RE - TC-T64G-086-RE",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-086-RE",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354778_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-021-00ST11",
+     "title": "Mitsubishi  - Lancer Evo VI 2000 black/white - 1:64 - Tarmac - T64-021-00ST11 - TC-T64-021-00ST11",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-021-00ST11",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354444_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-021-00ST11",
+     "title": "Mitsubishi  - Lancer Evo VI 2000 black/white - 1:64 - Tarmac - T64-021-00ST11 - TC-T64-021-00ST11",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-021-00ST11",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.354/354444_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-F064-GR2",
+     "title": "Mercedes Benz AMG - W14 2023 black/blue - 1:64 - Tarmac - T64G-F064-GR2 - TC-T64G-F064-GR2",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-F064-GR2",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353754_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-F064-GR2",
+     "title": "Mercedes Benz AMG - W14 2023 black/blue - 1:64 - Tarmac - T64G-F064-GR2 - TC-T64G-F064-GR2",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-F064-GR2",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353754_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64G-018-JV",
+     "title": "Nissan  - Silvia (S14) chrome - 1:64 - Tarmac - T64G-018-JV - TC-T64G-018-JV",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-018-JV",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353749_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64G-018-JV",
+     "title": "Nissan  - Silvia (S14) chrome - 1:64 - Tarmac - T64G-018-JV - TC-T64G-018-JV",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64G-018-JV",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.353/353749_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64-081-93RDF03",
+     "title": "Ford  - Escort 1993 white/blue - 1:64 - Tarmac - T64-081-93RDF03 - TC-T64-081-93RDF03",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-081-93RDF03",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.351/351590_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64-081-93RDF03",
+     "title": "Ford  - Escort 1993 white/blue - 1:64 - Tarmac - T64-081-93RDF03 - TC-T64-081-93RDF03",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64-081-93RDF03",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.351/351590_1.jpg"
+    }
+   },
+   {
+    "old": {
+     "code": "TC-T64S-022-MG",
+     "title": "Porsche  - Cayman GT4RS Mint Green mint green - 1:64 - Tarmac - T64S-022-MG - TC-T64S-022-MG",
+     "status": "current",
+     "available": "",
+     "url": "https://www.diecastcompany.nl/article/TC-T64S-022-MG",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.348/348018_1.jpg",
+     "first_seen": "2026-09-17 10:57",
+     "last_seen": "2026-09-22 05:02",
+     "active": true
+    },
+    "new": {
+     "code": "TC-T64S-022-MG",
+     "title": "Porsche  - Cayman GT4RS Mint Green mint green - 1:64 - Tarmac - T64S-022-MG - TC-T64S-022-MG",
+     "status": "pre-order",
+     "available": "September 2026",
+     "url": "https://www.diecastcompany.nl/article/TC-T64S-022-MG",
+     "image": "https://www.diecastcompany.nl/images/artikelen/.348/348018_1.jpg"
+    }
+   }
+  ]
+ },
+ {
+  "time": "2026-09-22 11:02",
+  "manufacturer": "Mini GT",
+  "added": [
+   {
+    "code": "MGT00928-007J",
+    "title": "Ford  - Mustang Convertible  1964 cream/red - 1:64 - Mini GT - MGT00928-007J - MGT00928-007J",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT00928-007J",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361416_1.jpg"
+   },
+   {
+    "code": "MGT00928-007F",
+    "title": "Ford  - Mustang Convertible  1964 cream/red - 1:64 - Mini GT - MGT00928-007F - MGT00928-007F",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT00928-007F",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361415_1.jpg"
+   },
+   {
+    "code": "MGT00928-007E",
+    "title": "Ford  - Mustang Convertible  1964 cream/red - 1:64 - Mini GT - MGT00928-007E - MGT00928-007E",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT00928-007E",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361414_1.jpg"
+   },
+   {
+    "code": "MGT00926-007TC",
+    "title": "Aston Martin  - V12 Vanquish  2002 silver - 1:64 - Mini GT - MGT00926-007TC - MGT00926-007TC",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT00926-007TC",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361413_1.jpg"
+   },
+   {
+    "code": "MGT00926-007J",
+    "title": "Aston Martin  - V12 Vanquish  2002 silver - 1:64 - Mini GT - MGT00926-007J - MGT00926-007J",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT00926-007J",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361412_1.jpg"
+   },
+   {
+    "code": "MGT00926-007G",
+    "title": "Aston Martin  - V12 Vanquish  2002 silver - 1:64 - Mini GT - MGT00926-007G - MGT00926-007G",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT00926-007G",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361411_1.jpg"
+   },
+   {
+    "code": "MGT00926-007E",
+    "title": "Aston Martin  - V12 Vanquish  2002 silver - 1:64 - Mini GT - MGT00926-007E - MGT00926-007E",
+    "status": "pre-order",
+    "available": "February 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT00926-007E",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361410_1.jpg"
+   },
+   {
+    "code": "MGT01370-BL",
+    "title": "Lamborghini  - Huracan  2025 various - 1:64 - Mini GT - MGT01370-BL - MGT01370-BL",
+    "status": "pre-order",
+    "available": "January 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT01370-BL",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361005_1.jpg"
+   },
+   {
+    "code": "MGT01316-L",
+    "title": "Nissan  - FFZ400 2025 yellow - 1:64 - Mini GT - MGT01316-L - MGT01316-L",
+    "status": "pre-order",
+    "available": "December 2026",
+    "url": "https://www.diecastcompany.nl/article/MGT01316-L",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.359/359192_1.jpg"
+   },
+   {
+    "code": "MGT00914-007J",
+    "title": "BMW  - Z3 1995 blue - 1:64 - Mini GT - MGT00914-007J - MGT00914-007J",
+    "status": "pre-order",
+    "available": "September 2026",
+    "url": "https://www.diecastcompany.nl/article/MGT00914-007J",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.357/357427_1.jpg"
+   },
+   {
+    "code": "MGTOM056-L",
+    "title": "Accessoires  - black - Mini GT - MGTOM056-L - MGTOM056-L",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGTOM056-L",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.357/357237_1.jpg"
+   },
+   {
+    "code": "MGT01194L",
+    "title": "Red Bull Racing   - RB19 2023 varius - 1:64 - Mini GT - MGT01194-L - MGT01194L",
+    "status": "pre-order",
+    "available": "September 2026",
+    "url": "https://www.diecastcompany.nl/article/MGT01194L",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.355/355209_1.jpg"
+   },
+   {
+    "code": "MGT01148BL",
+    "title": "Honda  - 1987 yellow - 1:64 - Mini GT - 01148BL - MGT01148BL",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGT01148BL",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.353/353276_1.jpg"
+   },
+   {
+    "code": "MGT01022Rhd",
+    "title": "Nissan  - Silvia 2025 white/red/blue - 1:64 - Mini GT - 01022Rhd - MGT01022Rhd",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGT01022Rhd",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.351/351022_1.jpg"
+   },
+   {
+    "code": "MGT01004Lhd",
+    "title": "Cadillac  - V-Series.R 2024 yellow/black - 1:64 - Mini GT - 01004L - MGT01004Lhd",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGT01004Lhd",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.347/347372_1.jpg"
+   }
+  ],
+  "removed": [
+   {
+    "code": "MGT01369-R",
+    "title": "Mercedes Benz  - EQS 53 2025 gold - 1:64 - Mini GT - MGT01369-R - MGT01369-R",
+    "status": "pre-order",
+    "available": "January 2027",
+    "url": "https://www.diecastcompany.nl/article/MGT01369-R",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.361/361023_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "MGT01324-BL",
+    "title": "Subaru  - Impreza WRC98 1999 various - 1:64 - Mini GT - MGT01324-BL - MGT01324-BL",
+    "status": "pre-order",
+    "available": "November 2026",
+    "url": "https://www.diecastcompany.nl/article/MGT01324-BL",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.359/359759_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "MGT01223-R",
+    "title": "Mazda  - RX-7 2012 green - 1:64 - Mini GT - MGT01223-R - MGT01223-R",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGT01223-R",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.357/357642_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "MGTOM057-XL",
+    "title": "Accessoires  - white - Mini GT - MGTOM057-XL - MGTOM057-XL",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGTOM057-XL",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.357/357244_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "MGTOM045-10",
+    "title": "Case  - 1:64 - Mini GT - MGTOM045-10 - MGTOM045-10",
+    "status": "pre-order",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGTOM045-10",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.355/355900_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "MGT00910-007SC",
+    "title": "Aston Martin  - DB10 2015 silver - 1:64 - Mini GT - 00910-007SC - MGT00910-007SC",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGT00910-007SC",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.353/353323_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "MGT01113",
+    "title": "Aston Martin  - AMR24 2024 green/black - 1:64 - Mini GT - 01113 - MGT01113",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGT01113",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.351/351210_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   },
+   {
+    "code": "MGT00989BL",
+    "title": "Nissan  - Z Veilside 2024 orange - 1:64 - Mini GT - 00989BL - MGT00989BL",
+    "status": "current",
+    "available": "",
+    "url": "https://www.diecastcompany.nl/article/MGT00989BL",
+    "image": "https://www.diecastcompany.nl/images/artikelen/.347/347650_1.jpg",
+    "first_seen": "2026-09-17 10:57",
+    "last_seen": "2026-09-22 05:02",
+    "active": true
+   }
+  ],
+  "changed": []
+ },
+ {
   "time": "2026-09-22 05:02",
   "manufacturer": "Black Box Diorama",
   "added": [],
